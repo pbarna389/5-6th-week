@@ -20,18 +20,18 @@
   color: whitesmoke;
 }
 
-#beer-00 {
+#beer-01 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-#beer-01 > div > * {
+#beer-02 > div > * {
   font-weight: 100;
 }
 
-#beer-02 > div > h3 {
+#beer-03 > div > h3 {
   color: red;
 }
 
-#beer-03 > div > h4 {
+#beer-04 > div > h4 {
   text-decoration: underline;
 }

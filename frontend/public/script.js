@@ -1,26 +1,12 @@
-// const firstPerson = {
-//     name: "Peter",
-//     sex: "male"
-// };
-
-// const secondPerson = {
-//     name: "Sarah",
-//     sex: "female"
-// };
-
-// function getGender(person) {
-//     if (person.sex === "male") {
-//         return "He's a man!"
-//     } else {
-//         return "She's a woman!"
-//     };
-// };
-
-// console.log(getGender(firstPerson));
-// console.log(getGender(secondPerson));
 console.table(beers.cards);
 
-const beerSectionComponent = (innerData, id = 0) => {
+const beerTitleComponent = () => {
+    return `
+    <h1>Beers</h1>
+    `
+};
+
+const beerSectionComponent = (innerData, id = `beer-0`) => {
     return `
         <section id=${id}>
             ${innerData}
@@ -41,27 +27,22 @@ const init = () => {
     const rootElement = document.querySelector('#root');
     const beerCards = beers.cards;
 
+    rootElement.insertAdjacentHTML('beforebegin', beerTitleComponent());
+
     for (const element of beerCards) {
-        let beerData = "";
-        let beerID = ""
+        // let beerData = "";
+        // let beerID = "";
 
-        beerData += beerCardComponent(element.title, element.sub, element.text);
-        beerID += `beer-0${beerCards.indexOf(element)}`;
+        // beerData += beerCardComponent(element.title, element.sub, element.text);
+        // beerID += `beer-0${beerCards.indexOf(element) + 1}`;
 
-        console.log(beerID)
-
-        rootElement.insertAdjacentHTML('beforeend', beerSectionComponent(beerData, beerID));
+        rootElement.insertAdjacentHTML('beforeend', beerSectionComponent(beerCardComponent(element.title, element.sub, element.text), `beer-0${beerCards.indexOf(element) + 1}`));
     };
-
-    // beers.cards.forEach(element => {
-    //     let beerData = "";
-
-    //     beerData += beerCardComponent(element.title, element.sub, element.text);
-    // beerID += `0${beerCards.indexOf(element)}`; 
-
-    //     rootElement.insertAdjacentHTML('beforeend', beerSectionComponent(beerData, beerID));
-    // });
-
 };
 
+// A JS létrehoz egy window objektumot, amit a böngésző detektál
+// addEventListener => az eseményfigyelő
 window.addEventListener("load", init);
+
+//Feladatok: nyomkodni a for ciklusokat ezerrel
+//Extra feladat: kapunk egy ugyanilyen adatstruktúrájú js file-t, egy tök új repoba ugyanezeket meg kell csinálni -> mozifilmes 
