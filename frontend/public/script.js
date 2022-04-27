@@ -27,11 +27,11 @@ const beerSectionComponent = (innerData, id = 0) => {
         </section>`
 };
 
-const beerCardComponent = (title, sub, type) => {
+const beerCardComponent = (name, comp, type) => {
     return `
         <div>
-            <h1>Title: ${title}</h1>
-            <h3>Company: ${sub}</h3>
+            <h1>Name: ${name}</h1>
+            <h3>Company: ${comp}</h3>
             <h4>Type: ${type}</h4>
         </div>
     `
@@ -46,7 +46,7 @@ const init = () => {
         let beerID = ""
 
         beerData += beerCardComponent(element.title, element.sub, element.text);
-        beerID += `0${beerCards.indexOf(element)}`;
+        beerID += `beer-0${beerCards.indexOf(element)}`;
 
         console.log(beerID)
 
