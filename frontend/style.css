@@ -1,0 +1,21 @@
+#root {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+#root > section {
+  width: 15%;
+  padding: 10px;
+}
+
+#root > section:nth-child(odd) {
+  background-color: green;
+  color: bisque;
+}
+
+#root > section:nth-child(even) {
+  background-color: black;
+  color: whitesmoke;
+}
