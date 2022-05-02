@@ -1,11 +1,77 @@
-#root {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  gap: 10px;
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
-#root > section {
-  width: 15%;
-  padding: 10px;
+header {
+  position: fixed;
+  width: 100%;
+  height: 60px;
 }
+
+#root {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#root section {
+  position: relative;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  border-bottom: 4px solid white;
+  padding: 80px 20px 0;
+}
+
+#root section h2 {
+  color: darkcyan;
+}
+
+#root section h2 span {
+  -webkit-transition: color 2s;
+  transition: color 2s;
+}
+
+@media (max-width: 400px) {
+  #root section h2 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  #root section h2 span {
+    color: crimson;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 800px) {
+  #root section h2 {
+    font-size: 50px;
+    font-weight: 600;
+  }
+  #root section h2 span {
+    color: darkorange;
+  }
+}
+
+@media (min-width: 801px) {
+  #root section h2 {
+    font-size: 100px;
+    font-weight: 600;
+  }
+}
+
+#root section button {
+  position: absolute;
+  background-color: black;
+  color: #f2f2f2;
+  width: calc(100% - 80px);
+  max-width: 400px;
+  height: 60px;
+  margin: 40px;
+  right: 0;
+  bottom: 0;
+}
+
+footer {
+  min-height: 400px;
+}
+/*# sourceMappingURL=style.css.map */
