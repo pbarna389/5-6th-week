@@ -9,29 +9,3 @@
   width: 15%;
   padding: 10px;
 }
-
-#root > section:nth-child(odd) {
-  background-color: green;
-  color: bisque;
-}
-
-#root > section:nth-child(even) {
-  background-color: black;
-  color: whitesmoke;
-}
-
-#beer-01 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-#beer-02 > div > * {
-  font-weight: 100;
-}
-
-#beer-03 > div > h3 {
-  color: red;
-}
-
-#beer-04 > div > h4 {
-  text-decoration: underline;
-}
